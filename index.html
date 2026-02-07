@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Aadhya | My Universe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #000;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .particle {
+            position: fixed;
+            top: -50px;
+            pointer-events: none;
+            animation: fall linear infinite;
+            z-index: 1;
+        }
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        .page {
+            display: none;
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            padding: 35px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            z-index: 10;
+            animation: fadeIn 0.8s ease-in-out;
+            box-shadow: 0 0 40px rgba(255, 20, 147, 0.15);
+        }
+
+        .active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 { font-family: 'Fredoka One', cursive; margin-bottom: 20px; letter-spacing: 1px; }
+        p { margin-bottom: 20px; font-weight: 300; line-height: 1.6; font-size: 1.05rem; }
+
+        .shayari {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            color: #ffdae0;
+            background: rgba(255, 0, 204, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 3px solid #ff00cc;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 8px 15px rgba(255, 0, 204, 0.3);
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(255, 0, 204, 0.5); }
+
+        .box-grid { display: grid; gap: 10px; margin-bottom: 20px; }
+        .letter-box {
+            padding: 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            text-align: left;
+            border-left: 4px solid white;
+        }
+
+        #noBtn { background: #444; color: #fff; position: relative; }
+        #yesBtn { background: #00c853; }
+        .gif { width: 140px; border-radius: 15px; margin-bottom: 20px; }
+
+        .typewriter::after {
+            content: "|";
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="page1" class="page active">
+        <h1 style="color: #ff00cc;">Hello Aadhya... ✨</h1>
+        <p id="text1"></p>
+        <button class="btn" id="btn1" style="display:none;" onclick="nextPage(2)">Let's Go In ➔</button>
+    </div>
+
+    <div id="page2" class="page">
+        <h1 style="color: #3333ff; font-size: 1.8rem;">Aadhya, You are Special...</h1>
+        <div class="box-grid">
+            <div class="letter-box" style="background: #ff2d55; color: #fff;"><b>A - Amazing:</b> Tumhare saath hui vo pehli मुलाकात magic thi.</div>
+            <div class="letter-box" style="background: #2196f3; color: #fff;"><b>A - Adorable:</b> Tumhari muskaan hi kaafi hai mera din banane ko.</div>
+            <div class="letter-box" style="background: #8bc34a; color: #fff;"><b>D - Dreamy:</b> Ek aisa khwab jise main roz jeena chahta hoon.</div>
+            <div class="letter-box" style="background: #fbc02d; color: #000;"><b>H - Heart:</b> Is par sirf tumhara haq hai.</div>
+            <div class="letter-box" style="background: #9c27b0; color: #fff;"><b>Y - Yearning:</b> Bas tumhara saath chahiye, humesha.</div>
+            <div class="letter-box" style="background: #009688; color: #fff;"><b>A - Always:</b> Kya tum mere saath humesha rahogi?</div>
+        </div>
+        <button class="btn" onclick="nextPage(3)">Kuch Aur Hai... ❤️</button>
+    </div>
+
+    <div id="page3" class="page">
+        <h1 style="font-family: 'Dancing Script'; font-size: 2.5rem; color: #ff00cc;">My Words For You</h1>
+        <div class="shayari">
+            "Likha hai dil par naam tumhara,<br>
+            Tumhe paana hi hai maqsad hamara,<br>
+            Log kehte hain ishq ek junoon hai,<br>
+            Magar mere liye tera saath hi sukoon hai."
+        </div>
+        <p style="font-style: italic; font-size: 0.9rem;">
+            Aadhya, pata nahi kab tum meri sabse pyari 'Power' ban gayi. 
+        </p>
+        <div class="shayari" style="border-left-color: #3333ff; font-size: 1.2rem;">
+            "Phoolon ki mehak bhi phiki lagti hai,<br>
+            Jab tum mere saath hoti ho..."
+        </div>
+        <button class="btn" onclick="nextPage(4)">One Last Thing 💍</button>
+    </div>
+
+    <div id="page4" class="page">
+        <img id="mainGif" src="https://media.tenor.com/OnfW9V9H8SgAAAAi/bubu-dudu-bubu.gif" class="gif">
+        <h1 id="questionText" style="font-size: 1.8rem;">Will you be my Valentine, Aadhya? 🌹</h1>
+        <div class="btn-container">
+            <button class="btn" id="yesBtn" onclick="celebrate()">YES! 💖</button>
+            <button class="btn" id="noBtn" onclick="handleNoClick()">NO 😤</button>
+        </div>
+    </div>
+
+    <div id="page5" class="page">
+        <img src="https://media.tenor.com/6n76M59Xp7IAAAAi/mochi-peach-cat-cute-cat.gif" class="gif">
+        <h1 style="font-size: 2.5rem; color: #ff0055;">Happy Rose Day! 🌹</h1>
+        <p style="font-weight: 600;">To the most beautiful rose of my life, Aadhya.</p>
+        <div class="shayari">
+            "Bade hi naazuk se hote hain ye phool,<br>
+            Magar tumhari ek muskaan ke aage,<br>
+            Duniya ke saare gulab hain fuzool."
+        </div>
+        <p>Love you humesha! ❤️</p>
+    </div>
+
+    <script>
+        const text1 = "Main bohot dino se tumse kuch kehna chahta tha, par himmat nahi hui. Aaj socha ek chhoti si duniya tumhare liye banaun...";
+        let i = 0;
+        function typeWriter() {
+            if (i < text1.length) {
+                document.getElementById("text1").innerHTML += text1.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            } else {
+                document.getElementById("btn1").style.display = "inline-block";
+            }
+        }
+        window.onload = typeWriter;
+
+        function nextPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
+
+        const emojis = ['❤️', '💖', '✨', '🌸', '🌹', '🦋'];
+        let rainInterval = setInterval(createParticle, 100);
+
+        function createParticle(specificEmoji = null) {
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            // Agar koi specific emoji bola gaya hai (jaise Rose), to wahi dikhao
+            p.innerHTML = specificEmoji ? specificEmoji : emojis[Math.floor(Math.random() * emojis.length)];
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.fontSize = Math.random() * 20 + 20 + 'px';
+            p.style.animationDuration = Math.random() * 2 + 2 + 's'; // Thodi fast speed
+            document.body.appendChild(p);
+            setTimeout(() => p.remove(), 3000);
+        }
+
+        // --- No Button Logic ---
+        let noCount = 0;
+        const noTexts = ["Are you sure?", "Ek baar phir soch lo...", "Pukka? Final answer?", "Plzzzz maan jao na!", "Aadhya, please? 🥺"];
+        const sadGifs = ["https://media.tenor.com/TK_S9p-m96wAAAAi/sad-bear.gif", "https://media.tenor.com/9m07P96GvXIAAAAi/sad-cry.gif"];
+
+        function handleNoClick() {
+            const noBtn = document.getElementById('noBtn');
+            const yesBtn = document.getElementById('yesBtn');
+            const mainGif = document.getElementById('mainGif');
+            noBtn.innerText = noTexts[noCount % noTexts.length];
+            mainGif.src = sadGifs[noCount % sadGifs.length];
+            noCount++;
+            yesBtn.style.transform = `scale(${1 + (noCount * 0.2)})`;
+        }
+
+        function celebrate() {
+            // Purani baarish band
+            clearInterval(rainInterval);
+            
+            // Page switch
+            nextPage(5);
+
+            // Sirf Roses ki baarish (Medium se thodi zyada speed)
+            setInterval(() => {
+                createParticle('🌹');
+            }, 50); // 50ms interval matlab kafi saare roses ek sath
+        }
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
